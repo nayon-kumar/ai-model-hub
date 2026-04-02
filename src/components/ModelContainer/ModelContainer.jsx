@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Model from "./Model/Model";
+import Cart from "./Cart/Cart";
 
 const ModelContainer = () => {
   const [selectedBtn, setSelectedBtn] = useState("model");
@@ -18,6 +20,15 @@ const ModelContainer = () => {
           Cart(0)
         </button>
       </div>
+      {selectedBtn === "model" ? (
+        <>
+          <Model />
+        </>
+      ) : (
+        <>
+          <Cart />
+        </>
+      )}
     </div>
   );
 };
