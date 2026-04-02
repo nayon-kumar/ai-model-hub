@@ -3,7 +3,12 @@ import React from "react";
 const ModelCard = ({ data }) => {
   console.log(data);
   return (
-    <div className="border-2 border-gray-200 shadow-xl rounded-2xl overflow-hidden">
+    <div className="border-2 border-gray-200 shadow-xl rounded-2xl overflow-hidden relative">
+      <div className="absolute top-5 right-5 z-10">
+        <span className="bg-[#E7000B] text-white uppercase px-5 py-1 text-[13px] rounded-full font-bold">
+          Popular
+        </span>
+      </div>
       <div className="bg-[#E4E4E7]">
         <img
           className="h-50 mx-auto p-5 hover:scale-105 transition-all duration-400 ease-in-out"
