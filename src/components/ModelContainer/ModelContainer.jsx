@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import Model from "./Model/Model";
 import Cart from "./Cart/Cart";
 
-const ModelContainer = () => {
+const ModelContainer = ({ modelPromise }) => {
+  const modelData = use(modelPromise);
+  console.log(modelData);
   const [selectedBtn, setSelectedBtn] = useState("model");
   return (
     <div className="mt-10">
