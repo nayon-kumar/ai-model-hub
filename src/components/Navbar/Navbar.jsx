@@ -68,7 +68,9 @@ const Navbar = () => {
           <div className="cursor-pointer px-3 py-3 bg-base-200 hover:bg-base-300 rounded-full">
             <ShoppingCart />
           </div>
-          <a className="btn btn-secondary rounded-full">Get Started</a>
+          <a className="btn rounded-full bg-linear-to-r from-[#F63399] to-[#FA2C38] text-white">
+            Get Started
+          </a>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-950 border-t border-red-900/50 pt-16">
+    <footer className="bg-zinc-950 border-t border-red-900/50 pt-16 mt-40">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:justify-center md:grid-cols-5 gap-8">
           {/* Logo & Description */}
