@@ -4,10 +4,9 @@ import Cart from "./Cart/Cart";
 
 const ModelContainer = ({ modelPromise }) => {
   const modelData = use(modelPromise);
-  console.log(modelData);
   const [selectedBtn, setSelectedBtn] = useState("model");
   return (
-    <div className="mt-10">
+    <div className="mt-10 px-5">
       <div className="flex flex-wrap gap-3 items-center justify-center">
         <button
           onClick={() => setSelectedBtn("model")}
@@ -24,7 +23,7 @@ const ModelContainer = ({ modelPromise }) => {
       </div>
       {selectedBtn === "model" ? (
         <>
-          <Model />
+          <Model modelData={modelData} />
         </>
       ) : (
         <>
