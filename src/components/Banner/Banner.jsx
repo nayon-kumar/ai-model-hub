@@ -24,7 +24,7 @@ const Banner = () => {
             advanced AI models, unified under a single, powerful subscription.
           </p>
 
-          <div className="flex items-center justify-center sm:justify-normal pt-4">
+          <div className="flex items-center justify-center sm:justify-normal pt-5">
             <button className="bg-red-600 hover:bg-red-500 transition-all btn rounded-2xl font-semibold text-lg shadow-xl shadow-red-500/30 flex items-center gap-3 group text-white">
               Get Unlimited Access
               <span className="group-hover:translate-x-1 transition">→</span>
