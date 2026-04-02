@@ -10,7 +10,7 @@ const Model = ({ modelData }) => {
           One subscription gives you access to all frontier AI models
         </p>
       </div>
-      <div className="mt-10 grid grid-cols-3 gap-5">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {modelData.map((data) => (
           <ModelCard key={data.id} data={data} />
         ))}
