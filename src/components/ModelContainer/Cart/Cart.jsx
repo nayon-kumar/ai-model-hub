@@ -9,7 +9,7 @@ const Cart = ({ cart, setCart }) => {
       </div>
       <div className="mt-10 flex flex-col gap-5">
         {cart.map((data) => (
-          <CartCard key={data.id} data={data} />
+          <CartCard key={data.id} data={data} cart={cart} setCart={setCart} />
         ))}
       </div>
     </div>

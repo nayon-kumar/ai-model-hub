@@ -1,11 +1,19 @@
 import React from "react";
 import { Trash2 } from "lucide-react";
 
-const CartCard = ({ data }) => {
+const CartCard = ({ data, cart, setCart }) => {
+  const deleteItem = (item) => {
+    const filteredItem = cart.filter((cartItem) => cartItem.id != item.id);
+    setCart(filteredItem);
+  };
+
   console.log(data);
   return (
     <div className="border-2 border-gray-300 hover:border-gray-500 rounded-2xl bg-[#F4F4F5] flex gap-4 items-center justify-between p-5 relative">
-      <div className="absolute top-5 right-5 bg-white border-2 border-gray-200 rounded-full p-1">
+      <div
+        onClick={() => deleteItem(data)}
+        className="absolute top-5 right-5 bg-white border-2 border-gray-200 rounded-full p-1"
+      >
         <div className="text-red-500 cursor-pointer">
           <Trash2 size={30} />
         </div>
