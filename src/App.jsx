@@ -4,6 +4,7 @@ import Banner from "./components/Banner/Banner";
 import Footer from "./components/Footer/Footer";
 import ModelContainer from "./components/ModelContainer/ModelContainer";
 import Navbar from "./components/Navbar/Navbar";
+import { ToastContainer } from "react-toastify";
 
 const fetchModel = async () => {
   const res = await fetch("/model.json");
@@ -33,6 +34,8 @@ function App() {
       </Suspense>
 
       <Footer />
+      {/* React-Toastify */}
+      <ToastContainer />
     </>
   );
 }
