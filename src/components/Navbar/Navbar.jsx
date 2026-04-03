@@ -4,7 +4,7 @@ import { ShoppingCart } from "lucide-react";
 
 const Navbar = ({ cart }) => {
   return (
-    <div>
+    <div className="fixed top-0 left-0 w-full z-20">
       <div className="bg-base-100 shadow-sm">
         <div className="navbar max-w-7xl mx-auto">
           <div className="navbar-start">
