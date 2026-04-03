@@ -9,6 +9,8 @@ const ModelCard = ({ data, cart, setCart, total, setTotal }) => {
     }
   };
 
+  const isSelected = cart.some((cartItem) => cartItem.id === data.id);
+
   return (
     <div className="border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl overflow-hidden relative">
       <div className="absolute top-5 right-5 z-10">
@@ -42,10 +44,11 @@ const ModelCard = ({ data, cart, setCart, total, setTotal }) => {
         )}
 
         <button
+          disabled={isSelected}
           onClick={() => handleClick(data)}
-          className="btn w-full mt-5 bg-linear-to-r from-[#F63399] to-[#FA2C38] text-white rounded-full"
+          className={`btn w-full mt-5  rounded-full ${isSelected ? "" : "bg-linear-to-r from-[#F63399] to-[#FA2C38] text-white"}`}
         >
-          Subscribe Now
+          {isSelected ? "Subscribed" : "Subscribe Now"}
         </button>
       </div>
     </div>
