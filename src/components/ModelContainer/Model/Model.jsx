@@ -1,7 +1,7 @@
 import React from "react";
 import ModelCard from "../../../ui/ModelCard/ModelCard";
 
-const Model = ({ modelData }) => {
+const Model = ({ modelData, cart, setCart }) => {
   return (
     <div className="mt-10">
       <div className="text-center">
@@ -10,9 +10,9 @@ const Model = ({ modelData }) => {
           One subscription gives you access to all frontier AI models
         </p>
       </div>
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8">
         {modelData.map((data) => (
-          <ModelCard key={data.id} data={data} />
+          <ModelCard key={data.id} data={data} cart={cart} setCart={setCart} />
         ))}
       </div>
     </div>

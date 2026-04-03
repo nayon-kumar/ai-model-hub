@@ -2,11 +2,11 @@ import React, { use, useState } from "react";
 import Model from "./Model/Model";
 import Cart from "./Cart/Cart";
 
-const ModelContainer = ({ modelPromise }) => {
+const ModelContainer = ({ modelPromise, cart, setCart }) => {
   const modelData = use(modelPromise);
   const [selectedBtn, setSelectedBtn] = useState("model");
   return (
-    <div className="mt-10 px-5">
+    <div className="max-w-7xl mx-auto mt-10 px-4">
       <div className="flex flex-wrap gap-3 items-center justify-center">
         <button
           onClick={() => setSelectedBtn("model")}
@@ -23,11 +23,11 @@ const ModelContainer = ({ modelPromise }) => {
       </div>
       {selectedBtn === "model" ? (
         <>
-          <Model modelData={modelData} />
+          <Model modelData={modelData} cart={cart} setCart={setCart} />
         </>
       ) : (
         <>
-          <Cart />
+          <Cart cart={cart} setCart={setCart} />
         </>
       )}
     </div>

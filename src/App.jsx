@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Footer from "./components/Footer/Footer";
@@ -13,6 +13,7 @@ const fetchModel = async () => {
 function App() {
   const modelPromise = fetchModel();
 
+  const [cart, setCart] = useState([]);
   return (
     <>
       <Navbar />
@@ -24,7 +25,11 @@ function App() {
           </div>
         }
       >
-        <ModelContainer modelPromise={modelPromise} />
+        <ModelContainer
+          modelPromise={modelPromise}
+          cart={cart}
+          setCart={setCart}
+        />
       </Suspense>
 
       <Footer />
