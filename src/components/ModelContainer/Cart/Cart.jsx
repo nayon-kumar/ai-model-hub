@@ -1,6 +1,11 @@
 import CartCard from "../../../ui/CartCard/CartCard";
 
 const Cart = ({ cart, setCart, total, setTotal }) => {
+  const chekcout = () => {
+    setCart([]);
+    setTotal(0);
+  };
+
   return (
     <div className="mt-10">
       <div>
@@ -16,7 +21,10 @@ const Cart = ({ cart, setCart, total, setTotal }) => {
           <p>Total</p>
           <p>${total}</p>
         </div>
-        <button className="btn w-full bg-green-400 text-white rounded-full">
+        <button
+          onClick={chekcout}
+          className="btn w-full bg-green-400 text-white rounded-full"
+        >
           Proceed To Checkout
         </button>
       </div>
