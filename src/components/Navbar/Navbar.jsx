@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import { ShoppingCart } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   return (
     <div>
       <div className="bg-base-100 shadow-sm">
@@ -70,8 +70,19 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end flex items-center gap-3">
-            <div className="cursor-pointer px-3 py-3 bg-base-200 hover:bg-base-300 rounded-full">
-              <ShoppingCart />
+            <div className="relative">
+              <div className="cursor-pointer px-3 py-3 bg-base-200 hover:bg-base-300 rounded-full">
+                <ShoppingCart />
+              </div>
+              {cart.length > 0 ? (
+                <>
+                  <div className="absolute top-0 right-0 bg-red-400 text-white px-2 py-0.5 rounded-full">
+                    <p className="text-[14px]">{cart.length}</p>
+                  </div>
+                </>
+              ) : (
+                <></>
+              )}
             </div>
             <a className="btn rounded-full bg-linear-to-r from-[#F63399] to-[#FA2C38] text-white">
               Get Started
