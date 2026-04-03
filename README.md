@@ -1,16 +1,38 @@
-# React + Vite
+# AI Model Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To show the live demo <a href="https://ai-model-hub-mocha.vercel.app/">Click Here</a>
 
-Currently, two official plugins are available:
+AI Hub is a modern **React-based** web application that provides access to multiple frontier AI models under a single platform. Users can browse AI models, subscribe to them, manage a cart, and simulate a checkout experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Technologies Used
 
-## React Compiler
+- **React.js** – Frontend library
+- **Tailwind CSS** – Utility-first CSS framework
+- **DaisyUI** – Tailwind UI component library
+- **React Icons (Lucide React)** – Icon library
+- **React Toastify** – Notifications
+- **JavaScript (ES6+)**
+- **HTML5 & CSS3**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Browse multiple AI models with detailed information
+- Add models to cart (no duplicate items allowed)
+- Remove items from cart
+- Dynamic total price calculation
+- Toggle between Model view and Cart view
+- Checkout functionality (resets cart and total)
+- Toast notifications for actions (add, delete, checkout)
+- Fully responsive design (mobile, tablet, desktop)
+- Sticky navigation and tab system
+- Clean and modern UI with animations
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Key Concepts Used
+
+- React Hooks (`useState`, `useMemo`, `Suspense`)
+- Lazy data fetching with `useMemo`
+- Component-based architecture
+- State management (cart & total)
+- Conditional rendering
+- Event handling
+- Responsive design principles

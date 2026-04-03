@@ -45,7 +45,7 @@ const Cart = ({ cart, setCart, total, setTotal }) => {
         <>
           <div className="mt-10 flex flex-col items-center justify-center">
             <ShoppingCart size={150} className="text-gray-500" />
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-gray-500 text-center">
               Your cart is empty. Go to model tab for add to cart.
             </p>
           </div>

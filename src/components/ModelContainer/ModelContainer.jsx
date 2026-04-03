@@ -10,7 +10,7 @@ const ModelContainer = ({ modelPromise, cart, setCart }) => {
 
   return (
     <div className="max-w-7xl mx-auto mt-10 px-4">
-      <div className="flex flex-wrap gap-3 items-center justify-center sticky top-[80px] bg-white py-5 z-20">
+      <div className="flex flex-wrap gap-3 items-center justify-center sticky top-16 bg-white py-5 z-20">
         <button
           onClick={() => setSelectedBtn("model")}
           className={`btn rounded-full md:px-20 px-10 ${selectedBtn === "model" ? "bg-linear-to-r from-[#F63399] to-[#FA2C38] text-white" : ""} `}
