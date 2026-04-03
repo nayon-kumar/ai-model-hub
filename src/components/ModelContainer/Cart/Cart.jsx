@@ -13,7 +13,14 @@ const Cart = ({ cart, setCart, total, setTotal }) => {
       </div>
       <div className="mt-10 flex flex-col gap-5">
         {cart.map((data) => (
-          <CartCard key={data.id} data={data} cart={cart} setCart={setCart} />
+          <CartCard
+            key={data.id}
+            data={data}
+            cart={cart}
+            setCart={setCart}
+            total={total}
+            setTotal={setTotal}
+          />
         ))}
       </div>
       <div className="mt-10 space-y-5">
