@@ -1,8 +1,10 @@
+import { toast } from "react-toastify";
 import CartCard from "../../../ui/CartCard/CartCard";
 import { ShoppingCart } from "lucide-react";
 
 const Cart = ({ cart, setCart, total, setTotal }) => {
   const chekcout = () => {
+    toast.success("Checkout Successfully!");
     setCart([]);
     setTotal(0);
   };

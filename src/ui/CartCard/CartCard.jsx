@@ -1,8 +1,10 @@
 import React from "react";
 import { Trash2 } from "lucide-react";
+import { toast } from "react-toastify";
 
 const CartCard = ({ data, cart, setCart, total, setTotal }) => {
   const deleteItem = (item) => {
+    toast.success(`${item.title} Deleted!`);
     setTotal(total - item.price);
     const filteredItem = cart.filter((cartItem) => cartItem.id != item.id);
     setCart(filteredItem);

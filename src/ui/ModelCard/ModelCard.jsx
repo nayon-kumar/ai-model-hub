@@ -5,7 +5,7 @@ const ModelCard = ({ data, cart, setCart, total, setTotal }) => {
   const handleClick = (item) => {
     const isExist = cart.some((cartItem) => cartItem.id === item.id);
     if (!isExist) {
-      toast.success(`${item.title} Added`);
+      toast.success(`${item.title} Added!`);
       setCart([...cart, item]);
       setTotal(total + item.price);
     }
