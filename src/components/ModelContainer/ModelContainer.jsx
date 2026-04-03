@@ -10,15 +10,15 @@ const ModelContainer = ({ modelPromise, cart, setCart }) => {
       <div className="flex flex-wrap gap-3 items-center justify-center">
         <button
           onClick={() => setSelectedBtn("model")}
-          className={`btn rounded-full px-10 ${selectedBtn === "model" ? "bg-linear-to-r from-[#F63399] to-[#FA2C38] text-white" : ""} `}
+          className={`btn rounded-full md:px-20 px-10 ${selectedBtn === "model" ? "bg-linear-to-r from-[#F63399] to-[#FA2C38] text-white" : ""} `}
         >
           Model
         </button>
         <button
           onClick={() => setSelectedBtn("cart")}
-          className={`btn rounded-full px-10 ${selectedBtn === "cart" ? "bg-linear-to-r from-[#F63399] to-[#FA2C38] text-white" : ""} `}
+          className={`btn rounded-full px-10 md:px-20 ${selectedBtn === "cart" ? "bg-linear-to-r from-[#F63399] to-[#FA2C38] text-white" : ""} `}
         >
-          Cart(0)
+          Cart ({cart.length})
         </button>
       </div>
       {selectedBtn === "model" ? (

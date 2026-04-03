@@ -3,7 +3,7 @@ import BannerImage from "../../assets/banner.png";
 
 const Banner = () => {
   return (
-    <div className="px-4 mt-7">
+    <div className="px-4 mt-7 max-w-7xl mx-auto">
       <div className="flex flex-col-reverse gap-10 sm:flex-row items-center justify-around">
         {/* Left Content */}
         <div className="text-center sm:text-left">
