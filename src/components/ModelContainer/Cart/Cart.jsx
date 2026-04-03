@@ -1,7 +1,6 @@
-import React from "react";
 import CartCard from "../../../ui/CartCard/CartCard";
 
-const Cart = ({ cart, setCart }) => {
+const Cart = ({ cart, setCart, total, setTotal }) => {
   return (
     <div className="mt-10">
       <div>
@@ -11,6 +10,15 @@ const Cart = ({ cart, setCart }) => {
         {cart.map((data) => (
           <CartCard key={data.id} data={data} cart={cart} setCart={setCart} />
         ))}
+      </div>
+      <div className="mt-10 space-y-5">
+        <div className="flex items-center justify-between px-5 py-3 bg-[#F4F4F5] rounded-2xl border-2 border-gray-400 text-2xl font-bold">
+          <p>Total</p>
+          <p>${total}</p>
+        </div>
+        <button className="btn w-full bg-green-400 text-white rounded-full">
+          Proceed To Checkout
+        </button>
       </div>
     </div>
   );

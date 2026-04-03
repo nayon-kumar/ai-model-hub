@@ -34,7 +34,7 @@ const CartCard = ({ data, cart, setCart }) => {
 
       <div className="flex flex-wrap gap-8 items-center justify-between  md:w-auto">
         <div>
-          <h3 className="text-2xl font-bold lg:mt-5">$30</h3>
+          <h3 className="text-2xl font-bold lg:mt-5">${data.price}</h3>
         </div>
       </div>
     </div>

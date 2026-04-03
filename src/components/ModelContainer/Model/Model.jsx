@@ -1,7 +1,7 @@
 import React from "react";
 import ModelCard from "../../../ui/ModelCard/ModelCard";
 
-const Model = ({ modelData, cart, setCart }) => {
+const Model = ({ modelData, cart, setCart, total, setTotal }) => {
   return (
     <div className="mt-10">
       <div className="text-center">
@@ -12,7 +12,14 @@ const Model = ({ modelData, cart, setCart }) => {
       </div>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8">
         {modelData.map((data) => (
-          <ModelCard key={data.id} data={data} cart={cart} setCart={setCart} />
+          <ModelCard
+            key={data.id}
+            data={data}
+            cart={cart}
+            setCart={setCart}
+            total={total}
+            setTotal={setTotal}
+          />
         ))}
       </div>
     </div>

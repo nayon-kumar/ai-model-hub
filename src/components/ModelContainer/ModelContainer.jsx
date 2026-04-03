@@ -4,7 +4,10 @@ import Cart from "./Cart/Cart";
 
 const ModelContainer = ({ modelPromise, cart, setCart }) => {
   const modelData = use(modelPromise);
+
   const [selectedBtn, setSelectedBtn] = useState("model");
+  const [total, setTotal] = useState(0);
+
   return (
     <div className="max-w-7xl mx-auto mt-10 px-4">
       <div className="flex flex-wrap gap-3 items-center justify-center">
@@ -23,11 +26,22 @@ const ModelContainer = ({ modelPromise, cart, setCart }) => {
       </div>
       {selectedBtn === "model" ? (
         <>
-          <Model modelData={modelData} cart={cart} setCart={setCart} />
+          <Model
+            modelData={modelData}
+            cart={cart}
+            setCart={setCart}
+            total={total}
+            setTotal={setTotal}
+          />
         </>
       ) : (
         <>
-          <Cart cart={cart} setCart={setCart} />
+          <Cart
+            cart={cart}
+            setCart={setCart}
+            total={total}
+            setTotal={setTotal}
+          />
         </>
       )}
     </div>
