@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Footer from "./components/Footer/Footer";
@@ -11,7 +11,7 @@ const fetchModel = async () => {
 };
 
 function App() {
-  const modelPromise = fetchModel();
+  const modelPromise = useMemo(() => fetchModel(), []);
 
   const [cart, setCart] = useState([]);
   return (
